@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/plain/contrib/misc/fixpdfmag.tex
+# catalog-date 2009-09-17 21:16:39 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-fixpdfmag
 Version:	20090917
 Release:	1
@@ -36,6 +42,7 @@ the effects of \mag.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/plain/fixpdfmag/fixpdfmag.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -46,3 +53,5 @@ the effects of \mag.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
