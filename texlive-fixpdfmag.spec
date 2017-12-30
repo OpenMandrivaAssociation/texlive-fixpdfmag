@@ -5,8 +5,8 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-fixpdfmag
-Version:	20090917
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Fix magnification in PDFTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/misc/fixpdfmag.tex
