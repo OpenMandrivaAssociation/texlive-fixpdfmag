@@ -1,17 +1,11 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/plain/contrib/misc/fixpdfmag.tex
-# catalog-date 2009-09-17 21:16:39 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-fixpdfmag
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Fix magnification in PDFTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/misc/fixpdfmag.tex
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixpdfmag.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixpdfmag.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ the page dimension variables from pt to truept, thus evading
 the effects of \mag.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -37,24 +31,10 @@ the effects of \mag.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090917-2
-+ Revision: 751916
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090917-1
-+ Revision: 718453
-- texlive-fixpdfmag
-- texlive-fixpdfmag
-- texlive-fixpdfmag
-- texlive-fixpdfmag
-
