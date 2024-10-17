@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Fix magnification in PDFTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/misc/fixpdfmag.tex
+URL:		https://www.ctan.org/tex-archive/macros/plain/contrib/misc/fixpdfmag.tex
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixpdfmag.r%{version}.tar.xz
 BuildArch:	noarch
